@@ -1,6 +1,7 @@
 import _ from "lodash";
 import "./style.css";
 import Icon from "./icon.png";
+import printMe from "./print";
 function component() {
   var element = document.createElement("div");
 
@@ -12,6 +13,11 @@ function component() {
   myIcon.src = Icon;
 
   element.appendChild(myIcon);
+
+  var btn = document.createElement("button");
+  btn.innerHTML = "click me and check the console output";
+  btn.onclick = printMe;
+  element.appendChild(btn);
 
   return element;
 }
